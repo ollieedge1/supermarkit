@@ -6,70 +6,132 @@
     <title>Moneymochi — Your Family's Spending Companion</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #26200a; background: #fdf8e8; }
-        .hero { background: linear-gradient(135deg, #F2C40F, #FFD71E); padding: 80px 24px 60px; text-align: center; }
-        .hero h1 { font-size: 42px; font-weight: 900; margin-bottom: 8px; }
-        .hero p { font-size: 18px; opacity: 0.7; margin-bottom: 32px; }
-        .hero .emoji { font-size: 80px; margin-bottom: 16px; display: block; }
-        .badge { display: inline-block; margin-top: 16px; }
-        .badge img { height: 54px; }
-        .features { max-width: 640px; margin: 0 auto; padding: 60px 24px; }
-        .feature { display: flex; gap: 16px; margin-bottom: 32px; align-items: flex-start; }
-        .feature .icon { font-size: 32px; flex-shrink: 0; width: 48px; height: 48px; background: #F2C40F; border-radius: 12px; display: flex; align-items: center; justify-content: center; }
-        .feature h3 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
-        .feature p { font-size: 14px; color: #666; line-height: 1.5; }
-        .footer { text-align: center; padding: 40px 24px; border-top: 1px solid #e8e0c0; font-size: 13px; color: #999; }
-        .footer a { color: #26200a; text-decoration: none; margin: 0 12px; }
-        .footer a:hover { text-decoration: underline; }
-        .footer .copy { margin-top: 12px; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #26200a;
+            background: #fdf6e3;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Nav */
+        nav {
+            padding: 24px 48px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        nav .logo { font-size: 28px; }
+        nav .name { font-size: 18px; font-weight: 700; }
+
+        /* Hero */
+        .hero {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 48px 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            gap: 60px;
+        }
+        .hero-text { max-width: 520px; }
+        .hero-text h1 {
+            font-size: clamp(40px, 6vw, 64px);
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+        .hero-text p {
+            font-size: 18px;
+            color: #8a7e5a;
+            line-height: 1.6;
+            margin-bottom: 36px;
+        }
+        .cta {
+            display: inline-block;
+            background: #26200a;
+            color: #fdf6e3;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 18px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(38, 32, 10, 0.15);
+        }
+
+        /* Character */
+        .hero-character {
+            flex-shrink: 0;
+        }
+        .hero-character .mochi {
+            width: clamp(240px, 30vw, 400px);
+            height: auto;
+        }
+
+        /* Footer */
+        footer {
+            padding: 24px 48px;
+            border-top: 1px solid #e8e0c0;
+            display: flex;
+            gap: 24px;
+        }
+        footer a {
+            font-size: 14px;
+            color: #8a7e5a;
+            text-decoration: none;
+        }
+        footer a:hover { color: #26200a; }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            nav { padding: 20px 24px; }
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 20px 24px 40px;
+                gap: 32px;
+            }
+            .hero-text { max-width: 100%; }
+            .hero-character .mochi { width: 200px; }
+            footer {
+                padding: 20px 24px;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 16px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="hero">
-        <span class="emoji">🐱</span>
-        <h1>Moneymochi</h1>
-        <p>Your family's spending companion</p>
-        <p style="font-size: 15px; opacity: 0.6; max-width: 400px; margin: 0 auto 24px;">Scan receipts. Track price rises. Set budgets. Know where every penny goes.</p>
-    </div>
+    <nav>
+        <span class="logo">🐱</span>
+        <span class="name">Moneymochi</span>
+    </nav>
 
-    <div class="features">
-        <div class="feature">
-            <div class="icon">🧾</div>
-            <div>
-                <h3>Scan any receipt</h3>
-                <p>Point your camera at any shop receipt. Mochi reads every item and price in seconds.</p>
-            </div>
+    <main class="hero">
+        <div class="hero-text">
+            <h1>Meet Mochi</h1>
+            <p>Your family's spending companion. Scan receipts, track price rises, set budgets.</p>
+            <a href="https://apps.apple.com/app/moneymochi/idYOUR_APP_ID" class="cta">Download Moneymochi</a>
         </div>
-        <div class="feature">
-            <div class="icon">📈</div>
-            <div>
-                <h3>Track price rises</h3>
-                <p>Know when your weekly shop is getting more expensive. Mochi spots every price change.</p>
-            </div>
+        <div class="hero-character">
+            <img src="mochi.png" alt="Mochi character" class="mochi" onerror="this.style.display='none';document.getElementById('mochi-fallback').style.display='block'">
+            <div id="mochi-fallback" style="display:none;font-size:clamp(160px,24vw,280px);line-height:1;">🐱</div>
         </div>
-        <div class="feature">
-            <div class="icon">🎯</div>
-            <div>
-                <h3>Set budgets, hit goals</h3>
-                <p>Create weekly or monthly budgets for your household. Track progress together as a family.</p>
-            </div>
-        </div>
-        <div class="feature">
-            <div class="icon">🏪</div>
-            <div>
-                <h3>Compare stores</h3>
-                <p>Find where each item is cheapest across the supermarkets you actually shop at.</p>
-            </div>
-        </div>
-    </div>
+    </main>
 
-    <div class="footer">
-        <div>
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/terms">Terms & Conditions</a>
-            <a href="/support">Support</a>
-        </div>
-        <div class="copy">&copy; 2026 Moneymochi. All rights reserved.</div>
-    </div>
+    <footer>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="/support">Contact</a>
+    </footer>
 </body>
 </html>
