@@ -129,6 +129,24 @@
         footer a:hover { color: #26200a; }
         footer .copy { font-size: 13px; color: #bbb; }
 
+        /* Background emoji scatter */
+        .emoji-bg {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+        .emoji-bg span {
+            position: absolute;
+            opacity: 0.06;
+            user-select: none;
+        }
+        body > *:not(.emoji-bg) {
+            position: relative;
+            z-index: 1;
+        }
+
         /* Mobile */
         @media (max-width: 768px) {
             nav { padding: 20px 24px; }
@@ -154,6 +172,23 @@
     </style>
 </head>
 <body>
+    <div class="emoji-bg">
+        <span style="font-size:180px; top:2%; left:5%; transform:rotate(-22deg);">🥛</span>
+        <span style="font-size:160px; top:8%; right:8%; transform:rotate(15deg);">🍞</span>
+        <span style="font-size:140px; top:25%; left:2%; transform:rotate(12deg);">🧀</span>
+        <span style="font-size:200px; top:18%; right:2%; transform:rotate(-28deg);">🥚</span>
+        <span style="font-size:150px; top:40%; left:8%; transform:rotate(-10deg);">🍎</span>
+        <span style="font-size:170px; top:45%; right:5%; transform:rotate(20deg);">🥦</span>
+        <span style="font-size:130px; top:58%; left:3%; transform:rotate(25deg);">🍗</span>
+        <span style="font-size:190px; top:55%; right:10%; transform:rotate(-18deg);">🧃</span>
+        <span style="font-size:160px; top:72%; left:10%; transform:rotate(-30deg);">🥩</span>
+        <span style="font-size:140px; top:70%; right:3%; transform:rotate(8deg);">🧈</span>
+        <span style="font-size:180px; top:85%; left:5%; transform:rotate(18deg);">🥫</span>
+        <span style="font-size:150px; top:88%; right:8%; transform:rotate(-12deg);">🍋</span>
+        <span style="font-size:120px; top:35%; left:45%; transform:rotate(-15deg);">🛒</span>
+        <span style="font-size:110px; top:65%; left:40%; transform:rotate(22deg);">🧾</span>
+    </div>
+
     <nav>
         <img src="monster-receipt.png" alt="Supermonster" class="logo">
         <span class="name">Supermonster</span>
@@ -172,13 +207,13 @@
 
     <section class="features">
         <div class="feature">
-            <img src="monster-receipt.png" alt="Monster scanning a receipt" class="feature-img">
+            <img src="monster-mascot.png" alt="Monster scanning a receipt" class="feature-img">
             <h3>Scan any receipt</h3>
             <p>Point your camera at a grocery receipt and Supermonster reads every item, price, and total instantly.</p>
         </div>
         <div class="feature">
             <img src="monster-chester.png" alt="Chester tracking price charts" class="feature-img">
-            <h3>Track price changes</h3>
+            <h3>Track price inflation</h3>
             <p>See when your regular items go up or down. Spot inflation before it hits your budget.</p>
         </div>
         <div class="feature">
