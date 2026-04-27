@@ -247,11 +247,14 @@
             margin-bottom: 48px;
         }
         .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 24px;
         }
         .feature-card {
+            flex: 0 1 calc(33.333% - 16px);
+            min-width: 260px;
             background: var(--card);
             border-radius: 20px;
             padding: 32px 28px;
@@ -383,7 +386,8 @@
             .steps { grid-template-columns: 1fr; gap: 16px; }
 
             .features { padding: 48px 24px; }
-            .feature-grid { grid-template-columns: 1fr; gap: 16px; }
+            .feature-grid { flex-direction: column; gap: 16px; }
+            .feature-card { flex: 1 1 100%; }
 
             .stats { padding: 40px 24px; }
             .stats-inner { grid-template-columns: 1fr; gap: 24px; }
@@ -489,6 +493,16 @@
                 <div class="feature-icon">💰</div>
                 <h3>Price comparison</h3>
                 <p>See which supermarket has the best prices for the items you actually buy. Real data, not estimates.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⛽</div>
+                <h3>Petrol tracking</h3>
+                <p>Scan fuel receipts too. Track litres, price per litre, and total spend across stations. See how fuel costs change over time.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏷️</div>
+                <h3>Smart categorisation</h3>
+                <p>Every item is automatically sorted into categories like dairy, snacks, and household. See exactly where your money goes.</p>
             </div>
         </div>
     </section>
