@@ -22,7 +22,7 @@
             align-items: center;
             gap: 12px;
         }
-        nav .logo { font-size: 28px; }
+        nav .logo { width: 36px; height: 36px; border-radius: 8px; }
         nav .name { font-size: 18px; font-weight: 700; }
 
         /* Hero */
@@ -82,8 +82,26 @@
             border-radius: 16px;
             padding: 28px;
             box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            text-align: center;
         }
         .feature .icon { font-size: 32px; margin-bottom: 12px; }
+        .feature .feature-img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 16px;
+        }
+        .feature .feature-img-row {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        .feature .feature-img-row img {
+            width: 56px;
+            height: 56px;
+            object-fit: contain;
+        }
         .feature h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
         .feature p { font-size: 14px; color: #8a7e5a; line-height: 1.5; }
 
@@ -135,7 +153,7 @@
 </head>
 <body>
     <nav>
-        <span class="logo">👾</span>
+        <img src="monster-receipt.png" alt="Supermonster" class="logo">
         <span class="name">Supermonster</span>
     </nav>
 
@@ -146,39 +164,42 @@
             <a href="https://apps.apple.com/app/supermonster-grocery-tracker/idYOUR_APP_ID" class="cta">Download on the App Store</a>
         </div>
         <div class="hero-character">
-            <img src="monster.png" alt="Supermonster character" class="monster" onerror="this.style.display='none';document.getElementById('monster-fallback').style.display='block'">
-            <div id="monster-fallback" style="display:none;font-size:clamp(160px,24vw,280px);line-height:1;">👾</div>
+            <img src="monster-basket.png" alt="Supermonster character holding a basket of groceries" class="monster">
         </div>
     </main>
 
     <section class="features">
         <div class="feature">
-            <div class="icon">📸</div>
+            <img src="monster-receipt.png" alt="Monster scanning a receipt" class="feature-img">
             <h3>Scan any receipt</h3>
             <p>Point your camera at a grocery receipt and Supermonster reads every item, price, and total instantly.</p>
         </div>
         <div class="feature">
-            <div class="icon">📈</div>
+            <img src="monster-chester.png" alt="Chester tracking price charts" class="feature-img">
             <h3>Track price changes</h3>
             <p>See when your regular items go up or down. Spot inflation before it hits your budget.</p>
         </div>
         <div class="feature">
-            <div class="icon">🏪</div>
+            <img src="monster-fuzzy.png" alt="Fuzzy with a shopping bag" class="feature-img">
             <h3>Compare stores</h3>
             <p>Find out which supermarket is cheapest for the things you actually buy, based on your own data.</p>
         </div>
         <div class="feature">
-            <div class="icon">🎯</div>
+            <img src="monster-grumpus.png" alt="Grumpus with a budget list" class="feature-img">
             <h3>Set budgets</h3>
             <p>Weekly or monthly budgets with real-time pacing. Get alerted before you overspend, not after.</p>
         </div>
         <div class="feature">
-            <div class="icon">📝</div>
+            <img src="monster-wally.png" alt="Wally with a shopping list" class="feature-img">
             <h3>Shopping lists</h3>
             <p>Build lists, share them with your household, and check off items as you shop. Widget included.</p>
         </div>
         <div class="feature">
-            <div class="icon">👾</div>
+            <div class="feature-img-row">
+                <img src="monster-blobby.png" alt="Blobby">
+                <img src="monster-pixel.png" alt="Pixel">
+                <img src="monster-fluffbert.png" alt="Fluffbert">
+            </div>
             <h3>Grow your monster</h3>
             <p>Your monster levels up as you scan and save. Eight characters to choose from, each with its own personality.</p>
         </div>
