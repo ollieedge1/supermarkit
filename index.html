@@ -74,7 +74,7 @@
             margin: 0 auto;
             padding: 60px 48px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 32px;
         }
         .feature {
@@ -140,7 +140,9 @@
             }
             .hero-text { max-width: 100%; }
             .hero-character .monster { width: 200px; }
-            .features { padding: 40px 24px; grid-template-columns: 1fr; }
+            .features { padding: 40px 24px; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+            .feature .feature-img { width: 72px; height: 72px; }
+            .feature .feature-img-row img { width: 40px; height: 40px; }
             footer {
                 padding: 20px 24px;
                 flex-direction: column;
@@ -195,10 +197,20 @@
             <p>Build lists, share them with your household, and check off items as you shop. Widget included.</p>
         </div>
         <div class="feature">
+            <img src="monster-pixel.png" alt="Pixel with a phone" class="feature-img">
+            <h3>Complete quests</h3>
+            <p>Your monster sets weekly challenges — find a cheaper alternative, stick to your budget, try a new store. Earn XP as you go.</p>
+        </div>
+        <div class="feature">
+            <img src="monster-mascot.png" alt="Mascot monster" class="feature-img">
+            <h3>Share with household</h3>
+            <p>Link accounts with a partner or housemate. See each other's trips, share shopping lists, and track spending together.</p>
+        </div>
+        <div class="feature">
             <div class="feature-img-row">
                 <img src="monster-blobby.png" alt="Blobby">
-                <img src="monster-pixel.png" alt="Pixel">
                 <img src="monster-fluffbert.png" alt="Fluffbert">
+                <img src="monster-basket.png" alt="Basket monster">
             </div>
             <h3>Grow your monster</h3>
             <p>Your monster levels up as you scan and save. Eight characters to choose from, each with its own personality.</p>
